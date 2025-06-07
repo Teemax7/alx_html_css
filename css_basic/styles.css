@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+article {
+    flex: 2;
+    overflow-y: auto;
+    padding: 1rem;
+}
+aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
