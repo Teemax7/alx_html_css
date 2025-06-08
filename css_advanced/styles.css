@@ -1,0 +1,375 @@
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Banner */
+.banner {
+  background: url('image/Object.png') no-repeat center center/cover;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.banner-tags {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #c271ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a04edb;
+}
+
+/* Pros Section */
+.pros-section {
+  margin-top: 80px;
+}
+
+.pros-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.pros-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pro {
+  text-align: center;
+  width: 200px;
+}
+
+.pro img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.quote-section {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between image and text */
+  padding: 50px 160px 50px;
+  background-color: #c271ff; /* light background for contrast */
+  color: #ffffff;
+}
+
+.quote-image img {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.quote-text blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  quotes: "“" "”" "‘" "’"; /* nicer quotes */
+}
+
+.quote-text h3 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.quote-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+.videos-section {
+  padding: 40px 20px;
+  background-color: #F2F2F2; 
+  color: #333;
+}
+
+.videos-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.video-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px; /* fixed width for each video card */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.video-card img:first-child {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.video-card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.2rem;
+}
+
+.video-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.author-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-info h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  color: #f5a623; /* golden stars */
+  margin-bottom: 12px;
+}
+
+.duration {
+  font-weight: 600;
+  color: #444;
+}
+.membership-section {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #071629;
+}
+
+.membership-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.membership-card {
+  background-color: #071629;
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+}
+
+.membership-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.membership-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.membership-card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.membership-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.membership-btn:hover {
+  background-color: #e94c4c;
+}
+/* FAQ Section */
+.faq-section {
+  padding: 20px 150px 50px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 1.5rem;
+  color: #071629;
+  margin-bottom: 70px;
+  
+}
+
+.faq-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-column {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  color: #071629;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Footer */
+.footer {
+  background-color: #071629;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-top {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-socials i {
+  font-size: 20px;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials i:hover {
+  transform: scale(1.1);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #bbb;
+}
+
