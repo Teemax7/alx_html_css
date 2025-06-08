@@ -1,0 +1,1 @@
+This project is a continuation of the HTML Advanced project, focusing on applying advanced CSS techniques to style a webpage based on a Figma design. The main goal is to replicate the provided design as closely as possible using clean, semantic HTML and modern CSS.
