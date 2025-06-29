@@ -1,164 +1,108 @@
 
-/* === RESET === */
 * {
+  font-family: 'source sans pro', sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-/* === VARIABLES === */
-:root {
-  --main-color: #FF6565;
-  --white: #ffffff;
-  --font-main: 'Source Sans Pro', sans-serif;
-  --max-width: 1000px;
-}
-
-/* === BASE === */
-body {
-  font-family: var(--font-main);
-  color: var(--white);
-  background-color: #000;
-}
-
-/* === HERO SECTION === */
-.hero {
-  background-image: url("images/headphones_hero_1.jpg");
+header {
+  background-image: url(images/headphones_hero_1.jpg);
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
-  min-height: 100vh;
-  width: 100%;
+  height: 800px;
+  color: #ffff;
+}
+.header-title {
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 650px;
+  width: 100%;
+  margin: 300px auto;
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    
+}
+.header-content {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: regular;
+  line-height: 1.5;
 }
 
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* === NAVIGATION === */
+/* Nav section */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-  padding: 20px 0;
+  padding: 30px 200px;
 }
-
-.logo {
-  height: 30px;
-  z-index: 3;
+.navbar img {
+  width: 170px;
 }
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  color: var(--white);
-  cursor: pointer;
-  z-index: 3;
-}
-
-.nav-links {
+.nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
-
-.nav-links a {
-  color: var(--white);
+.nav-list a, .header-title a {
   text-decoration: none;
+  font-size: 12px;
+  color: #ffff;
+  transition: color 0.3s;
+}
+.nav-list li a:hover,
+.nav-list li a:active {
+  color: #FF6565;
+}
+.btn {
+  background-color: #FF6565;
+  padding: 15px 35px;
+  margin: 30px auto;
+  border-radius: 22px;
+}
+.btn:hover, .btn:active  { 
+  background-color: #f51f1f;
 }
 
-.nav-links a:hover,
-.nav-links a:active {
-  color: var(--main-color);
+
+/* Hide checkbox and hamburger by default */
+#menu-toggle {
+display: none;
+}
+.menu-icon {
+display: none;
+font-size: 28px;
+cursor: pointer;
+color: #333;
 }
 
-/* === HERO TEXT === */
-.hero-content {
-  margin-top: 60px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  background-color: var(--main-color);
-  padding: 15px 30px;
-  border-radius: 20px;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.cta-button:hover {
-  opacity: 0.9;
-}
-
-.hero-subtext {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* === RESPONSIVE === */
+/* Responsive Styles */
 @media (max-width: 480px) {
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      border-radius: 5px;
+      padding: 10px;
+  }
+
   .menu-icon {
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 25px;
+      display: block;
   }
 
-  .logo {
-    margin: 0 auto;
+  #menu-toggle:checked + .menu-icon + .nav-list {
+      display: flex;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px 0;
-    text-align: center;
-    z-index: 2;
-  }
-
-  #menu-toggle:checked+.menu-icon+.logo+.nav-links {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .cta-button {
-    padding: 12px 24px;
+  .navbar {
+      position: relative;
   }
 }
